@@ -2,46 +2,38 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Outline
+An application that creates a 4-year plan for students and is well adapted based on the courses that are taken each quarter.
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Santa Monica College and Miracosta College both use MyEdPlan which is a service that is essentially the same but is older tech. Based on the courses in the student’s curriculum , a planner is created, and even shows the status of their degree. You could watch the video here: https://www.miracosta.edu/student-services/counseling/myedplan.html
 
-## Getting Started
+## Audience
+Students are the main audience of the application, but it is to be assumed that it’s moderated by UCSC faculty
 
-Get started by **creating a new site**.
+## Courses Data
+There will be a web scraper that will scrape for the courses and time. An alternative is to ask David Lee for the script of how the courses are taken.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+What are the requirements to make a 4-year plan for a student?
+- Year of first enrollment
+- Major
+- Minor (Perhaps a feature to show overlapping classes for more optimized planning?)
+- If it’s a transfer, then upper-division courses are shown for a 2-year planning period
+  - This could be very popular for STARS
 
-### What you'll need
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+## Tech Stack (Monolithic):
 
-## Generate a new site
+### Front-end:
+- React
+- Material UI
+- Tailwind CSS
 
-Generate a new Docusaurus site using the **classic template**.
+### Backend:
+- AWS Authentication
+- AWS DynamoDB
 
-The classic template will automatically be added to your project after you run the command:
+## Design
+Figma: https://www.figma.com/design/jcEtqjO168dIGZgMZbDODH/Project-Notes?node-id=0-1&t=cuqWA0Vii5V6JC56-1
 
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+We could have themes to give off a “planner” look to the user, similar to an actual planner:
+https://www.papier.com/us/stationery/academic-year-planners/
